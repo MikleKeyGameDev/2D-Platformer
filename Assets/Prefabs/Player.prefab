@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 804985685039441602}
   - component: {fileID: 2818610005280681224}
   - component: {fileID: 1774683029563709952}
+  - component: {fileID: 5455544078493616666}
   - component: {fileID: 6401122192086271924}
   - component: {fileID: 7021484200722246772}
   - component: {fileID: 2315380346059388012}
@@ -121,6 +122,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5455544078493616666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318035736478481996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77c1b72e39916b4881e90e4b9afeae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 8
+  _jumpForce: 15
+  _jumpKey: 32
 --- !u!114 &6401122192086271924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,9 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c59991289a77043af900488318b734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
-  _jumpForce: 0
-  _jumpKey: 32
 --- !u!114 &2315380346059388012
 MonoBehaviour:
   m_ObjectHideFlags: 0

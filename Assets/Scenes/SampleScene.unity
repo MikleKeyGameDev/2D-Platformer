@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 1851833543}
   - component: {fileID: 1851833542}
   - component: {fileID: 1851833541}
+  - component: {fileID: 1851833546}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -7534,6 +7535,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1851833546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851833539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6865dc6c959a58448cb34891065c86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2138373150
 GameObject:
   m_ObjectHideFlags: 0
@@ -7643,6 +7656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6401122192086271924, guid: 09a2f494a4c5d3a45a4822f9dd27f17b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7021484200722246772, guid: 09a2f494a4c5d3a45a4822f9dd27f17b, type: 3}
       propertyPath: _speed
       value: 8
@@ -7651,7 +7668,8 @@ PrefabInstance:
       propertyPath: _jumpForce
       value: 15
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
