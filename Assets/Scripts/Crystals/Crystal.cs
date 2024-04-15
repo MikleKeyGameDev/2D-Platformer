@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Crystal : MonoBehaviour
 {
-    [SerializeField] private string _title = "Crystal";
-
     public void DeleteObject()
     {
         Destroy(gameObject);

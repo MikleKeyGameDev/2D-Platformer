@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CollectingCrystals : MonoBehaviour
+public class CollectorCrystals : MonoBehaviour
 {
     private Crystal _crystal;
 

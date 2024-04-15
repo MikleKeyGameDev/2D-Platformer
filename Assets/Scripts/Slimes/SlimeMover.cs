@@ -1,37 +1,43 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class SlimeMover : MonoBehaviour
 {
-    private const string NameGroundTag = "Ground";
+    [SerializeField] private Transform[] _pointsTransform;
+    [SerializeField] private float _speed;
 
-    [SerializeField]private float _speed = 5f;
+    [SerializeField] private bool _isRight;
 
-    private Rigidbody2D _rigidbody;
-    private Ground _ground;
-
-    private void Start()
+    private void Update()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();    
+        CheckPosition();
     }
 
     private void FixedUpdate()
     {
-        Run();
+        Move();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Move()
     {
-        if (collision.gameObject.TryGetComponent<Ground>(out _ground))
+        if (_isRight == true)
         {
-            _speed *= -1f;
+            transform.position = Vector3.MoveTowards(transform.position, _pointsTransform[1].position, _speed * Time.deltaTime);
+        }
+        else if(_isRight == false)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, _pointsTransform[0].position, _speed * Time.deltaTime);
         }
     }
 
-    private void Run()
+    private void CheckPosition()
     {
-        Vector2 move = new Vector2(_speed, 0);
-        _rigidbody.velocity = move;
+        if (transform.position.x <= _pointsTransform[0].position.x && _isRight == false)
+        {
+            _isRight = true;
+        }
+        else if (transform.position.x >= _pointsTransform[1].position.x && _isRight == true)
+        {
+            _isRight = false;
+        }
     }
 }
